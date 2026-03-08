@@ -22,8 +22,11 @@ window.addEventListener('scroll', () => {
    ══════════════════════════════════════════════════════ */
 
 function submitDevis(event) {
-  // Empêche le rechargement de page par défaut du navigateur
-  event.preventDefault();
+  setTimeout(() => {
+    document.getElementById('devisForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'flex';
+  }, 500);
+}
 
   // On cache le formulaire
   document.getElementById('devisForm').style.display = 'none';
@@ -81,4 +84,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 }); // Se déclenche dès que 10% de l'élément est visible
 
 // On démarre la surveillance pour chaque élément
+
 animatedElements.forEach(el => observer.observe(el));
