@@ -22,28 +22,30 @@ window.addEventListener('scroll', () => {
    ══════════════════════════════════════════════════════ */
 
 function submitDevis(event) {
-    event.preventDefault(); // empêche le rechargement de la page
+  // Empêche le rechargement de page par défaut du navigateur
+  event.preventDefault();
 
-    const form = document.getElementById('devisForm');
-    const resultDiv = document.getElementById('result');
+  // On cache le formulaire
+  document.getElementById('devisForm').style.display = 'none';
 
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-            'Accept': 'application/json'
-        }
-    }).then(response => {
-        if (response.ok) {
-            resultDiv.innerText = "Merci, votre devis a été envoyé !";
-            form.reset();
-        } else {
-            resultDiv.innerText = "Erreur lors de l'envoi, réessayez.";
-        }
-    }).catch(error => {
-        resultDiv.innerText = "Erreur réseau, réessayez plus tard.";
-    });
+  // On affiche le message de confirmation
+  document.getElementById('formSuccess').style.display = 'block';
+
+  // Défilement doux vers le message pour que l'utilisateur le voie
+  document.getElementById('formSuccess').scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+
+  /*
+    ⚠️ Pour envoyer les données par email en vrai, utilisez Formspree :
+    1. Créez un compte sur https://formspree.io
+    2. Remplacez l'action du formulaire HTML par votre URL Formspree
+    3. Supprimez le onsubmit="submitDevis(event)" et laissez le formulaire
+       se soumettre normalement vers Formspree
+  */
 }
+
 
 /* ══════════════════════════════════════════════════════
    3. ANIMATIONS AU SCROLL — apparition des cartes
@@ -79,6 +81,4 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 }); // Se déclenche dès que 10% de l'élément est visible
 
 // On démarre la surveillance pour chaque élément
-
 animatedElements.forEach(el => observer.observe(el));
-
