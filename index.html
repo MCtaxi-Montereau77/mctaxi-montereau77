@@ -282,100 +282,100 @@
 
   <!-- DEVIS -->
   <section id="devis">
-    <div class="devis-info">
-      <p class="section-label">Estimation gratuite</p>
-      <h2>VOTRE DEVIS EN<br>2 MINUTES</h2>
-      <p class="section-desc">
-        Remplissez le ulaire et recevez votre estimation par SMS ou email.
-        Aucun engagement, réponse rapide garantie.
-      </p>
-      <ul class="devis-points">
-        <li>Réponse sous 15 minutes en journée</li>
-        <li>Tarif transparent, sans frais cachés</li>
-        <li>Paiement CB, espèces ou virement</li>
-        <li>Facturation disponible pour les entreprises</li>
-        <li>Annulation gratuite jusqu'à 2h avant</li>
-      </ul>
-    </div>
+  <div class="devis-info">
+    <p class="section-label">Estimation gratuite</p>
+    <h2>VOTRE DEVIS EN<br>2 MINUTES</h2>
+    <p class="section-desc">
+      Remplissez le formulaire et recevez votre estimation par SMS ou email.
+      Aucun engagement, réponse rapide garantie.
+    </p>
+    <ul class="devis-points">
+      <li>Réponse sous 15 minutes en journée</li>
+      <li>Tarif transparent, sans frais cachés</li>
+      <li>Paiement CB, espèces ou virement</li>
+      <li>Facturation disponible pour les entreprises</li>
+      <li>Annulation gratuite jusqu'à 2h avant</li>
+    </ul>
+  </div>
 
-    <div class="devis-">
-      <h3 class="-title">DEMANDE DE DEVIS</h3>
-      <p class="-subtitle">Tous les champs marqués * sont obligatoires</p>
-      <form id="devisForm" action="https://formspree.io/f/xzdjzvap" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Prénom *</label>
-            <input type="text" placeholder="Jean" required />
-          </div>
-          <div class="form-group">
-            <label>Nom *</label>
-            <input type="text" placeholder="Dupont" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Téléphone *</label>
-            <input type="tel" placeholder="06 00 00 00 00" required />
-          </div>
-          <div class="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="jean@email.com" />
-          </div>
+  <div class="devis-">
+    <h3 class="-title">DEMANDE DE DEVIS</h3>
+    <p class="-subtitle">Tous les champs marqués * sont obligatoires</p>
+    <form id="devisForm" action="https://formspree.io/f/xzdjzvap" method="POST" onsubmit="submitDevis(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom *</label>
+          <input type="text" name="prenom" placeholder="Jean" required />
         </div>
         <div class="form-group">
-          <label>Type de trajet *</label>
-          <select required>
-            <option value="" disabled selected>Choisir un service…</option>
-            <option>Transfert aéroport</option>
-            <option>Transfert gare</option>
-            <option>Transport médical</option>
-            <option>Longue distance</option>
-            <option>Événement / Mariage</option>
-            <option>Trajet local</option>
-            <option>Autre</option>
-          </select>
+          <label>Nom *</label>
+          <input type="text" name="nom" placeholder="Dupont" required />
         </div>
-        <div class="form-group">
-          <label>Adresse de départ *</label>
-          <input type="text" placeholder="123 rue de Paris, Montereau…" required />
-        </div>
-        <div class="form-group">
-          <label>Adresse d'arrivée *</label>
-          <input type="text" placeholder="CDG Terminal 2E, Paris…" required />
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Date *</label>
-            <input type="date" required />
-          </div>
-          <div class="form-group">
-            <label>Heure *</label>
-            <input type="time" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Nombre de passagers</label>
-          <select>
-            <option>1 passager</option>
-            <option>2 passagers</option>
-            <option>3 passagers</option>
-            <option>4 passagers</option>
-            <option>5+ passagers</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Informations complémentaires</label>
-          <textarea rows="3" placeholder="Bagages, besoins spécifiques, numéro de vol…" style="resize:vertical;"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">✉️ Envoyer ma demande de devis</button>
-      </form>
-      <div class="form-success" id="formSuccess">
-        <span class="success-icon">✅</span>
-        <h3>DEVIS ENVOYÉ !</h3>
-        <p>Nous vous répondrons dans les meilleurs délais.<br>Merci de votre confiance !</p>
       </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Téléphone *</label>
+          <input type="tel" name="telephone" placeholder="06 00 00 00 00" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jean@email.com" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Type de trajet *</label>
+        <select name="trajet" required>
+          <option value="" disabled selected>Choisir un service…</option>
+          <option>Transfert aéroport</option>
+          <option>Transfert gare</option>
+          <option>Transport médical</option>
+          <option>Longue distance</option>
+          <option>Événement / Mariage</option>
+          <option>Trajet local</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Adresse de départ *</label>
+        <input type="text" name="depart" placeholder="123 rue de Paris, Montereau…" required />
+      </div>
+      <div class="form-group">
+        <label>Adresse d'arrivée *</label>
+        <input type="text" name="arrivee" placeholder="CDG Terminal 2E, Paris…" required />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" name="date" required />
+        </div>
+        <div class="form-group">
+          <label>Heure *</label>
+          <input type="time" name="heure" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Nombre de passagers</label>
+        <select name="passagers">
+          <option>1 passager</option>
+          <option>2 passagers</option>
+          <option>3 passagers</option>
+          <option>4 passagers</option>
+          <option>5+ passagers</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Informations complémentaires</label>
+        <textarea name="message" rows="3" placeholder="Bagages, besoins spécifiques, numéro de vol…" style="resize:vertical;"></textarea>
+      </div>
+      <button type="submit" class="btn-submit">✉️ Envoyer ma demande de devis</button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <span class="success-icon">✅</span>
+      <h3>DEVIS ENVOYÉ !</h3>
+      <p>Nous vous répondrons dans les meilleurs délais.<br>Merci de votre confiance !</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ════════════════════════════════════════════════
        SECTION AVIS AMÉLIORÉE
@@ -646,6 +646,7 @@ Je recommande !!!!!</p>
 </body>
 
 </html>
+
 
 
 
