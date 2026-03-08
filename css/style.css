@@ -1464,4 +1464,90 @@ footer {
 
 .footer-logo-conventionne:hover {
   opacity: 1;
+
 }
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE MOBILE — SECTION DEVIS
+   ══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Section devis : une colonne au lieu de 2 */
+  #devis {
+    grid-template-columns: 1fr !important;
+    padding: 3rem 1.2rem !important;
+  }
+
+  /* Le texte info passe au dessus du formulaire */
+  .devis-info {
+    order: 1;
+  }
+
+  .devis-form {
+    order: 2;
+  }
+
+  /* Les champs côte à côte passent en colonne */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Navbar mobile */
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-logo-conventionne {
+    height: 32px !important;
+  }
+
+  /* Hero mobile */
+  #hero {
+    padding: 6rem 1.5rem 3rem !important;
+  }
+
+  h1 {
+    font-size: 4rem !important;
+  }
+
+  .hero-stats {
+    gap: 1rem !important;
+  }
+
+  /* Grilles en 1 colonne sur mobile */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pourquoi-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  .vehicule-split {
+    grid-template-columns: 1fr !important;
+  }
+
+  .vehicule-equipements {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pourquoi-stats {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .assurances-grid {
+    gap: 1rem !important;
+  }
+
+  .assurance-card {
+    min-width: 120px !important;
+    padding: 1.2rem !important;
+  }
+}
+
+
+
+
