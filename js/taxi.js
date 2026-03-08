@@ -21,32 +21,44 @@ window.addEventListener('scroll', () => {
    2. FORMULAIRE DE DEVIS — affichage du message de succès
    ══════════════════════════════════════════════════════ */
 
-function submitDevis(event) {
-  // Empêche le rechargement de page par défaut du navigateur
+async function submitDevis(event) {
+
   event.preventDefault();
 
-  // On cache le formulaire
-  document.getElementById('devisForm').style.display = 'none';
+  const form = document.getElementById('devisForm');
 
-  // On affiche le message de confirmation
-  document.getElementById('formSuccess').style.display = 'block';
+  const data = new FormData(form);
 
-  // Défilement doux vers le message pour que l'utilisateur le voie
-  document.getElementById('formSuccess').scrollIntoView({
-    behavior: 'smooth',
-    block: 'center'
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
   });
 
-  /*
-    ⚠️ Pour envoyer les données par email en vrai, utilisez Formspree :
-    1. Créez un compte sur https://formspree.io
-    2. Remplacez l'action du formulaire HTML par votre URL Formspree
-    3. Supprimez le onsubmit="submitDevis(event)" et laissez le formulaire
-       se soumettre normalement vers Formspree
-  */
+  if (response.ok) {
+
+    // cache le formulaire
+    form.style.display = 'none';
+
+    // affiche le message
+    document.getElementById('formSuccess').style.display = 'block';
+
+    // scroll vers le message
+    document.getElementById('formSuccess').scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+
+    form.reset();
+
+  } else {
+
+    alert("Erreur lors de l'envoi du formulaire.");
+
+  }
 }
-
-
 /* ══════════════════════════════════════════════════════
    3. ANIMATIONS AU SCROLL — apparition des cartes
    ══════════════════════════════════════════════════════ */
@@ -82,3 +94,4 @@ const observer = new IntersectionObserver((entries) => {
 
 // On démarre la surveillance pour chaque élément
 animatedElements.forEach(el => observer.observe(el));
+
