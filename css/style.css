@@ -1558,6 +1558,51 @@ footer {
   .pourquoi-photo img { height: 300px !important; }
   .vehicule-photo img { height: 250px !important; }
 }
+/* Boutons minimum 48px pour mobile */
+@media (max-width: 768px) {
+  .btn-nav, .btn-primary, .btn-outline, 
+  .btn-submit, .google-btn, .ville-card {
+    min-height: 48px !important;
+    min-width: 48px !important;
+  }
+  /* Texte minimum 14px partout */
+  body { font-size: 14px !important; }
+  .muted, .section-label, .service-tag,
+  .review-date, .form-group label {
+    font-size: 13px !important;
+  }
+}
+/* ══════════════════════════════════════════════
+   CORRECTION MOBILE — POURQUOI NOUS CHOISIR
+   ══════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Les cartes passent en colonne et ne débordent plus */
+  .pourquoi-card {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Le texte ne sort plus de l'écran */
+  .pourquoi-card p {
+    font-size: 0.9rem !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* La section ne déborde plus */
+  #pourquoi {
+    overflow: hidden !important;
+    padding: 3rem 1.2rem !important;
+  }
+
+  .pourquoi-args {
+    width: 100% !important;
+    overflow: hidden !important;
+  }
+}
 
 
 
