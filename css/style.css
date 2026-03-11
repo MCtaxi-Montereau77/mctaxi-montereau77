@@ -148,13 +148,16 @@ nav.scrolled {
 }
 .hero-badge::before { content: '●'; font-size: 0.6rem; }
 
-h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(4rem, 10vw, 9rem);
-  line-height: 0.95;
-  letter-spacing: 2px;
-  margin-bottom: 1.5rem;
-}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem !important;
+    line-height: 1.1;
+     font-family: 'Bebas Neue', sans-serif;
+     font-size: clamp(4rem, 10vw, 9rem);
+     line-height: 0.95;
+     letter-spacing: 2px;
+     margin-bottom: 1.5rem;
+  }
 
 h1 .accent { color: var(--yellow); }
 
@@ -270,7 +273,11 @@ h1 .accent { color: var(--yellow); }
 /* ══════════════════════════════════════════════════════
    SECTIONS COMMUNES
    ══════════════════════════════════════════════════════ */
-section { padding: 6rem 5%; }
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1.5rem;
+  }
+}
 
 .section-label {
   font-size: 0.75rem;
@@ -1504,17 +1511,25 @@ footer {
   }
 
   /* Hero mobile */
+@media (max-width: 768px) {
   #hero {
-    padding: 6rem 1.5rem 3rem !important;
+    min-height: auto;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
   }
+}
 
   h1 {
     font-size: 4rem !important;
   }
 
+@media (max-width: 768px) {
   .hero-stats {
-    gap: 1rem !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
+}
 
   /* Grilles en 1 colonne sur mobile */
   .services-grid {
@@ -1604,6 +1619,7 @@ footer {
   .footer-left { flex-direction: column !important; align-items: center !important; }
   .footer-links { flex-direction: column !important; gap: 0.5rem !important; text-align: center !important; }
 }
+
 
 
 
