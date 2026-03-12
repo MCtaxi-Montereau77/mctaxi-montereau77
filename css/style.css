@@ -720,7 +720,7 @@ h2 {
 }
 .pourquoi-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
 
-.pourquoi-stat {
+.pourquoi-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
@@ -1108,17 +1108,9 @@ footer {
 /* ══════════════════════════════════════════════════════
    RESPONSIVE — TABLETTE (max 900px)
    ══════════════════════════════════════════════════════ */
-/* Desktop — 4 colonnes (déjà en place) */
-.pourquoi-stats {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* Mobile — 1 colonne en vertical */
-@media (max-width: 768px) {
-  .pourquoi-stats {
-    grid-template-columns: 1fr;
-  }
-}
+@media (max-width: 900px) {
+  html, body { overflow-x: hidden; max-width: 100%; }
+  section { padding: 3rem 1.2rem; }
 
   /* HERO */
   h1 { font-size: 3.2rem; }
@@ -1186,5 +1178,3 @@ footer {
   /* Texte minimum */
   body { font-size: 15px; }
 }
-
-
