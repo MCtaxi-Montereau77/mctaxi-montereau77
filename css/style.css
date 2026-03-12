@@ -1111,32 +1111,27 @@ footer {
 @media (max-width: 900px) {
   html, body { overflow-x: hidden; max-width: 100%; }
   section { padding: 3rem 1.2rem; }
-
   /* HERO */
   h1 { font-size: 3.2rem; }
   .hero-btns { flex-direction: column; gap: 0.8rem; }
   .btn-primary, .btn-outline { width: 100%; text-align: center; justify-content: center; }
   .hero-stats { gap: 1.5rem; }
-
   /* NAV */
   .nav-links { display: none; }
-
   /* DEVIS */
   #devis { grid-template-columns: 1fr; gap: 2rem; }
   .devis-info { position: static; }
   .form-row { grid-template-columns: 1fr; }
-
   /* GRILLES */
   .services-grid { grid-template-columns: 1fr; }
   .pourquoi-split { grid-template-columns: 1fr; gap: 1.5rem; }
-  .pourquoi-stats { grid-template-columns: repeat(2, 1fr); }
+  .pourquoi-stats { grid-template-columns: 1fr; }
   .vehicule-split { grid-template-columns: 1fr; gap: 2rem; }
   .vehicule-photo img { height: 250px; }
   .vehicule-equipements { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
   .avis-excellent-badge { flex-direction: column; text-align: center; gap: 1rem; }
   .avis-badge-left { align-items: center; }
-
   /* ASSURANCES */
   .assurances-grid {
     display: grid;
@@ -1144,37 +1139,31 @@ footer {
     gap: 1rem;
   }
   .assurance-card { min-width: unset; width: 100%; padding: 1.2rem; }
-
   /* VILLES */
   .villes-grid { gap: 0.6rem; }
   .ville-card { font-size: 0.82rem; padding: 0.5rem 1rem; }
-
   /* FOOTER */
   footer { flex-direction: column; text-align: center; }
   .footer-left { flex-direction: column; align-items: center; gap: 0.8rem; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
 }
 
-/* ══════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE (max 768px)
-   ══════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
-  /* NAV mobile — logo compact + bouton qui ne déborde pas */
+  /* NAV mobile */
   nav { padding: 0.8rem 4%; gap: 0.5rem; }
   .nav-logo { font-size: 1.5rem; letter-spacing: 2px; }
   .nav-logo-conventionne { height: 34px; }
   .btn-nav { font-size: 0.75rem; padding: 0.5rem 1rem; min-height: 40px; }
-
+  /* Stats — 1 colonne sur mobile */
+  .pourquoi-stats { grid-template-columns: 1fr; }
   /* Images allégées */
   .hero-bg-img {
     background-image: url('https://images.unsplash.com/photo-1511527844068-006b95d162c2?w=800&q=60&auto=format');
   }
   .pourquoi-photo img { height: 250px; }
-
-  /* Boutons accessibles (48px minimum) */
+  /* Boutons accessibles */
   .btn-nav, .btn-primary, .btn-outline,
   .btn-submit, .google-btn { min-height: 48px; }
-
   /* Texte minimum */
   body { font-size: 15px; }
 }
