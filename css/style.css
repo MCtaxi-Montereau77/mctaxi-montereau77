@@ -720,7 +720,7 @@ h2 {
 }
 .pourquoi-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
 
-.pourquoi-stats {
+.pourquoi-stat {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
@@ -1178,3 +1178,4 @@ footer {
   /* Texte minimum */
   body { font-size: 15px; }
 }
+
