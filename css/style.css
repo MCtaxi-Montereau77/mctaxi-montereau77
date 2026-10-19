@@ -95,7 +95,7 @@ nav.scrolled {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 5%;
+  padding: 8rem 5% 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -1056,11 +1056,15 @@ footer {
   margin-top: 1rem;
 }
 
+.nav-right { display: flex; align-items: center; gap: 1rem; }
+
 .nav-logo-conventionne {
-  height: 44px;
+  height: 64px;
   width: auto;
   object-fit: contain;
-  filter: brightness(1.1);
+  background: #fff;
+  padding: 4px;
+  border-radius: 10px;
   transition: transform var(--transition);
 }
 .nav-logo-conventionne:hover { transform: scale(1.08); }
@@ -1158,7 +1162,7 @@ footer {
   .pourquoi-stats { grid-template-columns: 1fr; }
   /* Images allégées */
   .hero-bg-img {
-    background-image: url('../image/kia_nior_first_page');
+    background-image: url('../image/kia_nior_first_page.jpeg');
   }
   .pourquoi-photo img { height: 250px; }
   /* Boutons accessibles */
@@ -1167,40 +1171,4 @@ footer {
   /* Texte minimum */
   body { font-size: 15px; }
 }
-#hero {
-  position: relative;
-}
-/* Logo taxi conventionné en grand dans le hero */
-.hero-conventionne {
-  display: block;
-  width: clamp(120px, 14vw, 180px);
-  height: auto;
-  background: #fff;
-  padding: 10px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-  margin-bottom: 1.5rem;
-}
 
-/* Version navigation : plus grande et plus propre */
-.nav-logo-conventionne {
-  height: 64px;
-  width: auto;
-  background: #fff;
-  padding: 4px;
-  border-radius: 10px;
-}
-
-
-/* Mobile : plus petit pour ne pas gêner le texte */
-@media (max-width: 768px) {
-  .hero-conventionne {
-    top: 5.5rem;
-    right: 1rem;
-    width: 90px;
-  }
-}
-/* Corrige le chevauchement avec la barre de navigation */
-#hero .hero-content {
-  padding-top: 8rem !important;
-}
