@@ -1085,7 +1085,7 @@ footer {
 .hero-bg-img {
   position: absolute;
   inset: 0;
-  background-image: url('../image/kia_nior_first_page.jpeg');
+  background-image: url('../image/kia_nior_first_page.jpg');
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -1162,7 +1162,7 @@ footer {
   .pourquoi-stats { grid-template-columns: 1fr; }
   /* Images allégées */
   .hero-bg-img {
-    background-image: url('../image/kia_nior_first_page.jpeg');
+    background-image: url('../image/kia_nior_first_page.jpg');
   }
   .pourquoi-photo img { height: 250px; }
   /* Boutons accessibles */
