@@ -1170,6 +1170,26 @@ footer {
 #hero {
   position: relative;
 }
+/* Logo taxi conventionné en grand dans le hero */
+.hero-conventionne {
+  display: block;
+  width: clamp(120px, 14vw, 180px);
+  height: auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  margin-bottom: 1.5rem;
+}
+
+/* Version navigation : plus grande et plus propre */
+.nav-logo-conventionne {
+  height: 64px;
+  width: auto;
+  background: #fff;
+  padding: 4px;
+  border-radius: 10px;
+}
 
 
 /* Mobile : plus petit pour ne pas gêner le texte */
