@@ -1158,7 +1158,7 @@ footer {
   .pourquoi-stats { grid-template-columns: 1fr; }
   /* Images allégées */
   .hero-bg-img {
-    background-image: url('https://images.unsplash.com/photo-1511527844068-006b95d162c2?w=800&q=60&auto=format');
+    background-image: url('../image/kia_nior_first_page');
   }
   .pourquoi-photo img { height: 250px; }
   /* Boutons accessibles */
