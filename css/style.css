@@ -1081,7 +1081,7 @@ footer {
 .hero-bg-img {
   position: absolute;
   inset: 0;
-  background-image: url('../image/kia_nior_first_page);
+  background-image: url('../image/kia_nior_first_page');
   background-size: cover;
   background-position: center;
   z-index: 0;
