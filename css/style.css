@@ -1202,5 +1202,5 @@ footer {
 }
 /* Corrige le chevauchement avec la barre de navigation */
 #hero .hero-content {
-  padding-top: 7rem;
+  padding-top: 8rem !important;
 }
