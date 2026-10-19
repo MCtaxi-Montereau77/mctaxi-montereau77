@@ -1204,32 +1204,3 @@ footer {
 #hero .hero-content {
   padding-top: 7rem;
 }
-#hero {
-  position: relative;
-}
-
-#hero > img.hero-conventionne {
-  position: absolute;
-  top: 7rem;
-  right: 5%;
-  left: auto;
-  bottom: auto;
-  z-index: 3;
-  width: 170px;
-  max-width: 170px;
-  height: auto;
-  padding: 10px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  #hero > img.hero-conventionne {
-    top: 5.5rem;
-    right: 1rem;
-    width: 90px;
-    max-width: 90px;
-  }
-}
