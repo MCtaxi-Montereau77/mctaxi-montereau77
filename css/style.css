@@ -1161,11 +1161,9 @@ footer {
   /* Stats — 1 colonne sur mobile */
   .pourquoi-stats { grid-template-columns: 1fr; }
   /* Images allégées */
- .hero-bg-img {
-  background-image: url('../image/kia_nior_first_page.jpg');
-  background-size: cover;
-  background-position: 78% center;
-}
+  .hero-bg-img {
+    background-position: 78% center;
+  }
 .hero-overlay {
   background: linear-gradient(
     to bottom,
